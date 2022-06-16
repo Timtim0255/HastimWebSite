@@ -1,0 +1,37 @@
+body {
+  @include font_2_regular();
+  font-size: rem(14);
+  color: $black;
+  display: grid;
+  grid-template-columns:
+    minmax(rem(140)) minmax(rem(1000))
+    minmax(rem(140));
+  margin: 0 auto;
+  max-width: rem(1280);
+  background-color: $white;
+  .wrapper {
+    grid-column: 1 / -1;
+  }
+}
+h1 {
+  margin-left: rem(50);
+  @media #{$ipad_portrait} {
+    margin-left: rem(0);
+  }
+}
+h2 {
+  @media #{$ipad_portrait} {
+    text-align: center;
+  }
+}
+h4 {
+  @include font_3_medium;
+  font-size: rem(40);
+  margin-bottom: rem(10);
+  @media #{$ipad_portrait} {
+    font-size: rem(34);
+  }
+}
+em {
+  font-style: italic;
+}

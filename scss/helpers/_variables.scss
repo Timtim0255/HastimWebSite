@@ -1,0 +1,56 @@
+// Colors
+$white: #fff;
+$black: #000;
+$dark-grey: #4a4a49;
+$grey: #9c9c9c;
+$grey-light: #efefef;
+$green: #6cd04d;
+$dark-blue: #6487cb;
+$blue: #a6c4e5;
+$blue-light: #b7e3f1;
+
+// px to rem convertor
+$browser-context: 16; // Default
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+/*
+
+// Mixins
+@mixin chapo() {
+  position: relative;
+  &:before {
+    background-color: $color_2;
+    content: "";
+    height: 6px;
+    left: 0;
+    position: absolute;
+    top: -20px;
+    width: 44px;
+    @media all and (max-width: 767px) {
+      height: 4px;
+      width: 34px;
+    }
+    @media all and (min-width: 768px) {
+      height: 6px;
+      width: 44px;
+    }
+  }
+}
+
+@mixin button_1() {
+  @include font_2_bold();
+  background-color: $color_2;
+  border: none;
+  border-radius: 0;
+  color: #000000;
+  display: inline-block;
+  font-size: 11px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+}
+
+*/

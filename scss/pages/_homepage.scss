@@ -1,0 +1,524 @@
+//*********************** INTRO ************************************************************
+
+#intro-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: rem(100) rem(0) rem(100) rem(0);
+  @media #{$ipad_portrait} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: rem(60) rem(0) rem(30) rem(0);
+  }
+  @media screen and (max-width: rem(463)) {
+    padding: rem(40) rem(0) rem(10) rem(0);
+  }
+  /* ------- BEFORE ------- */
+  position: relative;
+  &:before {
+    content: "";
+    background-color: $white;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, rem(0));
+    z-index: -1;
+    //******************* A DELETE **********************
+    @media screen and (max-width: rem(295)) {
+      border: solid #6cd04d;
+      border-width: rem(0) rem(10) rem(0) rem(10);
+      transform: translate(-50%, rem(-10));
+      background-color: #000; //***********************
+      width: 93.5%; //***********************************
+      z-index: 1; //*************************************
+    } //*************************************************
+    //***************************************************
+  } /* ---------------------- */
+  #intro-txt {
+    width: rem(512);
+    position: relative;
+    font-size: rem(50);
+    line-height: rem(60);
+    @media #{$ipad_landscape} {
+      font-size: rem(45);
+      line-height: rem(54);
+    }
+    @media #{$ipad_portrait} {
+      width: 65%;
+      max-width: 80%;
+      font-size: rem(36);
+      line-height: rem(44);
+    }
+    @media screen and (max-width: rem(500)) {
+      width: 80%;
+      max-width: 85%;
+      font-size: rem(30);
+      line-height: rem(32);
+    }
+    h1 {
+      @include font_2_extrabold;
+    }
+  }
+  #intro-img {
+    z-index: -1;
+    top: 50%;
+    right: rem(100);
+    transform: translate(rem(-75), rem(30));
+    @media #{$ipad_portrait} {
+      transform: translate(rem(0), rem(-20));
+      right: rem(0);
+    }
+    img {
+      width: rem(800);
+      @media #{$ipad_portrait} {
+        width: rem(500);
+        max-width: 80%;
+      }
+    }
+  }
+}
+//******************************************************************************************
+
+//******************* PRESENTATION *********************************************************
+#presentation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: rem(100);
+  padding-bottom: rem(50);
+  @media #{$ipad_landscape} {
+    padding-top: rem(80);
+    padding-bottom: rem(40);
+  }
+  @media #{$ipad_portrait} {
+    padding-top: rem(60);
+    padding-bottom: rem(30);
+  }
+  @media screen and (max-width: rem(448)) {
+    padding-top: rem(40);
+    padding-bottom: rem(20);
+  }
+  /* ------- BEFORE ------- */
+  position: relative;
+  &:before {
+    content: "";
+    background-color: $black;
+    position: absolute;
+    width: 100vw;
+    height: 100.5%; //100%
+    left: 50%;
+    transform: translate(-50%, rem(-101)); //rem(-100)
+    z-index: -1;
+    @media #{$ipad_landscape} {
+      transform: translate(-50%, rem(-81));
+    }
+    @media #{$ipad_portrait} {
+      transform: translate(-50%, rem(-61));
+    }
+    @media screen and (max-width: rem(448)) {
+      transform: translate(-50%, rem(-41));
+    }
+    //******************* A DELETE **********************
+    @media screen and (max-width: rem(295)) {
+      border: solid #6cd04d;
+      border-width: rem(0) rem(10) rem(0) rem(10);
+      background-color: #000; //***********************
+      width: 93.5%; //***********************************
+      z-index: 1; //*************************************
+    } //*************************************************
+    //***************************************************
+  } /* ---------------------- */
+  #video-img {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    padding-bottom: rem(50);
+    @media #{$ipad_landscape} {
+      width: 80%;
+      padding-bottom: rem(40);
+    }
+    @media #{$ipad_portrait} {
+      padding-bottom: rem(30);
+    }
+    @media screen and (max-width: rem(448)) {
+      min-width: rem(270);
+      padding-bottom: rem(20);
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  #pres {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    padding-bottom: rem(50);
+    @media #{$ipad_landscape} {
+      width: 80%;
+      padding-bottom: rem(40);
+    }
+    @media #{$ipad_portrait} {
+      padding-bottom: rem(30);
+    }
+    @media screen and (max-width: rem(448)) {
+      min-width: rem(270);
+      padding-bottom: rem(20);
+    }
+
+    #titre-pres {
+      @include font_2_bold();
+      color: $green;
+      font-size: rem(30);
+      line-height: rem(35);
+      @media #{$ipad_portrait} {
+        font-size: rem(27);
+        line-height: rem(32);
+      }
+      @media screen and (max-width: rem(448)) {
+        font-size: rem(24);
+        line-height: rem(29);
+      }
+    }
+    #txt-pres {
+      @include font_2_regular();
+      font-size: rem(18);
+      color: $white;
+      margin-top: rem(20);
+      line-height: rem(22);
+      @media #{$ipad_portrait} {
+        font-size: rem(16);
+      }
+      @media screen and (max-width: rem(448)) {
+        margin-top: rem(10);
+        line-height: rem(20);
+      }
+    }
+  }
+}
+//******************************************************************************************
+
+//********************* EVOLUTION **********************************************************
+#evolution {
+  /* ------- BEFORE ------- */
+  position: relative;
+  &:before {
+    content: "";
+    background-color: $white;
+    position: absolute;
+    width: 100vw;
+    height: 100.5%; //100%
+    left: 50%;
+    transform: translate(-50%, rem(0)); //rem(-100)
+    z-index: -2;
+    //******************* A DELETE **********************
+    @media screen and (max-width: rem(295)) {
+      border: solid #6cd04d;
+      border-width: rem(0) rem(10) rem(0) rem(10);
+      background-color: #000; //***********************
+      width: 93.5%; //***********************************
+      z-index: 1; //*************************************
+    } //*************************************************
+    //***************************************************
+  } /* ---------------------- */
+  h2 {
+    @include font_2_extrabold;
+    color: $black;
+    font-size: rem(40);
+    padding-top: rem(100);
+    margin-bottom: rem(80);
+    margin-left: rem(82.5);
+    @media #{$ipad_landscape} {
+      margin-left: rem(70);
+    }
+    @media #{$ipad_portrait} {
+      font-size: rem(34);
+      margin-left: rem(0);
+      padding-top: rem(75);
+      margin-bottom: rem(60);
+    }
+    @media screen and (max-width: rem(448)) {
+      padding-top: rem(50);
+      margin-bottom: rem(40);
+    }
+  }
+  #evols {
+    display: flex;
+    flex-wrap: wrap; // si colonne trop grande, passe en dessous
+    padding-bottom: rem(50);
+    align-items: stretch;
+    justify-content: space-evenly;
+    @media screen and (max-width: rem(448)) {
+      padding-bottom: rem(10);
+    }
+
+    .evo-blocks {
+      @include font_2_medium;
+      font-size: rem(18);
+      width: 30%;
+      padding: rem(0) rem(30) rem(50) rem(30);
+      @media #{$ipad_landscape} {
+        width: 45%;
+      }
+      @media #{$ipad_portrait} {
+        width: 60%;
+        min-width: rem(270);
+      }
+      @media screen and (max-width: rem(448)) {
+        padding: rem(0) rem(30) rem(30) rem(30);
+      }
+      img {
+        max-height: rem(250);
+        margin-bottom: rem(20);
+      }
+      h4 {
+        margin-bottom: rem(5);
+      }
+      p {
+        font-size: rem(16);
+        line-height: 1.2;
+        .green-bold-words {
+          @include font_2_bold;
+          font-size: rem(18);
+          color: $green;
+        }
+      }
+    }
+  }
+}
+//******************************************************************************************
+
+//******************** KEY NUMBERS *********************************************************
+#key-numbers {
+  position: relative;
+
+  &:before {
+    content: "";
+    background-image: url(../../images/fond-key-num.png);
+    position: absolute;
+    width: 100vw;
+    background-size: cover;
+    height: 100.5%; //100%
+    left: 50%;
+    transform: translate(-50%, rem(-1)); //rem(0)
+    z-index: -1;
+    //******************* A DELETE **********************
+    @media screen and (max-width: rem(295)) {
+      background-image: none;
+      border: solid #6cd04d;
+      border-width: rem(0) rem(10) rem(0) rem(10);
+      background-color: #000; //***********************
+      width: 93.5%; //***********************************
+      z-index: 1; //*************************************
+    } //*************************************************
+    //***************************************************
+  }
+
+  h2 {
+    @include font_2_extrabold;
+    color: $black;
+    font-size: rem(40);
+    padding-top: rem(100);
+    margin-bottom: rem(80);
+    margin-left: rem(52);
+    @media #{$ipad_landscape} {
+      margin-left: rem(110);
+    }
+    @media #{$ipad_portrait} {
+      font-size: rem(34);
+      margin-left: rem(0);
+      padding-top: rem(75);
+      margin-bottom: rem(60);
+    }
+    @media screen and (max-width: rem(448)) {
+      padding-top: rem(50);
+      margin-bottom: rem(40);
+    }
+  }
+  #key-num {
+    display: flex;
+    flex-wrap: wrap; // si colonne trop grande, passe en dessous
+    justify-content: space-evenly;
+    @include font_2_medium;
+    font-size: rem(16);
+    padding-bottom: rem(10);
+  }
+  .num-blocks {
+    width: 30%;
+    padding: rem(0) rem(40) rem(50) rem(40);
+    @media #{$ipad_landscape} {
+      width: 40%;
+    }
+    @media #{$ipad_portrait} {
+      width: 60%;
+      min-width: rem(295);
+    }
+    @media screen and (max-width: rem(448)) {
+      padding: rem(0) rem(40) rem(30) rem(40);
+    }
+    .big-num {
+      @include font_3_medium;
+      font-size: rem(80);
+      color: $green;
+      letter-spacing: rem(3);
+      @media #{$ipad_portrait} {
+        font-size: rem(68);
+      }
+    }
+    .big-txt {
+      @include font_3_medium;
+      font-size: rem(40);
+      font-weight: 300;
+      color: $green;
+      letter-spacing: rem(3);
+      @media #{$ipad_portrait} {
+        font-size: rem(34);
+      }
+    }
+    .lil-txt {
+      line-height: rem(22);
+    }
+  }
+}
+//******************************************************************************************
+
+//********************** COOKIES ***********************************************************
+.overlay {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  @include font_2_bold;
+  font-size: rem(18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: rem(50);
+  background: #fff;
+  border-radius: rem(5);
+  width: 30%;
+  position: relative;
+  transition: all 2s ease-in-out;
+  h2 {
+    @include font_2_extrabold;
+    text-align: center;
+    color: $black;
+    font-size: rem(35);
+    margin: rem(0) rem(0) rem(0) rem(0);
+    padding: rem(10) rem(20) rem(20) rem(20);
+    @media #{$ipad_portrait} {
+      font-size: rem(30);
+    }
+    @media #{$phone_portait} {
+      font-size: rem(35);
+    }
+  }
+  .answer {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .yes {
+      border-radius: rem(4);
+      margin-right: rem(5);
+      background-color: $green;
+      padding: rem(10) rem(20) rem(10) rem(20);
+      &:hover {
+        background-color: #7eec5c;
+        cursor: pointer;
+      }
+    }
+    .no {
+      border-radius: rem(4);
+      margin-left: rem(5);
+      background-color: #ff0000;
+      padding: rem(10) rem(20) rem(10) rem(20);
+      &:hover {
+        background-color: #ff5151;
+        cursor: pointer;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+      :link {
+        color: #000;
+      }
+      :hover {
+        color: #333;
+      }
+      :active {
+        color: #333;
+      }
+    }
+  }
+}
+
+.popup .close {
+  position: absolute;
+  top: rem(20);
+  right: rem(30);
+  transition: all 200ms;
+  font-size: rem(30);
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: $dark-blue;
+}
+
+@media screen and (max-width: rem(700)) {
+  .box {
+    width: 70%;
+  }
+  .popup {
+    width: 70%;
+  }
+}
+//******************************************************************************************
+
+//**************** ANIMATION UNDERLINE *****************************************************
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: rem(1);
+  bottom: 0;
+  left: 0;
+  background-color: $black;
+  transform: translate(rem(0), rem(2));
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out, background-color 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  background-color: $white;
+  transform: translate(rem(0), rem(8));
+  transform-origin: bottom left;
+}
+
+//******************************************************************************************

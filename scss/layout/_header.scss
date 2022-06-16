@@ -1,0 +1,62 @@
+//*********************** HEAD *************************************************************
+
+header {
+  /* ------- BEFORE ------- */
+  position: relative;
+  &:before {
+    content: "";
+    background-color: $white;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, rem(0));
+    z-index: -1;
+    //******************* A DELETE **********************
+    @media screen and (max-width: rem(295)) {
+      border: solid #6cd04d;
+      border-width: rem(10) rem(10) rem(0) rem(10);
+      background-color: #000; //***********************
+      width: 93.5%; //***********************************
+      z-index: 1; //*************************************
+    } //*************************************************
+    //***************************************************
+  } /* ---------------------- */
+  #head {
+    display: flex;
+    row-gap: rem(20);
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(40) rem(50) rem(0) rem(50);
+    @media #{$ipad_portrait} {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #logoHP {
+      width: rem(228);
+      @media #{$ipad_portrait} {
+        width: rem(200);
+      }
+      @media screen and (max-width: rem(463)) {
+        width: rem(172);
+      }
+    }
+    #slogan {
+      @include font_1_regular();
+      font-size: rem(40);
+      color: $green;
+      @media #{$ipad_portrait} {
+        font-size: rem(35);
+        text-align: center;
+      }
+      @media screen and (max-width: rem(463)) {
+        font-size: rem(30);
+        text-align: center;
+      }
+    }
+  }
+}
+
+//******************************************************************************************

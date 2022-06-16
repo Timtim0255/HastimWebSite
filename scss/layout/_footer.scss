@@ -1,0 +1,228 @@
+//****************** RESTER INFORME ********************************************************
+
+.footer {
+  /* ------- BEFORE ------- */
+  position: relative;
+  &:before {
+    content: "";
+    background-color: $black;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, rem(0));
+    z-index: -1;
+    //******************* A DELETE **********************
+    @media screen and (max-width: rem(295)) {
+      border: solid #6cd04d;
+      border-width: rem(0) rem(10) rem(10) rem(10);
+      background-color: #000; //***********************
+      width: 93.5%; //***********************************
+      z-index: 1; //*************************************
+    } //*************************************************
+    //***************************************************
+  } /* ---------------------- */
+}
+#information {
+  display: flex;
+  justify-content: center;
+  padding-top: rem(100);
+  padding-bottom: rem(100);
+  @media #{$ipad_landscape} {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+  }
+  @media #{$ipad_portrait} {
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+  }
+  @media screen and (max-width: rem(448)) {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+    text-align: center;
+  }
+  #box-inform {
+    width: 58%;
+    @media screen and (max-width: rem(940)) {
+      width: 70%;
+    }
+    @media #{$ipad_portrait} {
+      width: 80%;
+    }
+    #green-sentence {
+      @include font_2_bold;
+      font-size: rem(30);
+      color: $green;
+      @media #{$ipad_portrait} {
+        font-size: rem(28);
+      }
+      @media screen and (max-width: rem(448)) {
+        font-size: rem(25);
+      }
+    }
+    #mail-box {
+      display: flex;
+      margin-top: rem(20);
+      margin-bottom: rem(20);
+      min-height: rem(40);
+      @media screen and (max-width: rem(448)) {
+        flex-direction: column;
+      }
+      #textbox-mail {
+        @include font_2_regular;
+        font-size: rem(16);
+        background-color: $white;
+        padding: rem(10) rem(0) rem(10) rem(25);
+        margin: rem(0);
+        width: fill;
+        height: rem(50);
+        border: none;
+        border-radius: rem(5) rem(0) rem(0) rem(5);
+        @media #{$ipad_portrait} {
+          padding: rem(10) rem(0) rem(10) rem(25);
+          font-size: rem(14);
+          height: rem(45);
+        }
+        @media screen and (max-width: rem(448)) {
+          padding: rem(10) rem(0) rem(10) rem(0);
+          text-align: center;
+          height: rem(40);
+          border-radius: rem(5) rem(5) rem(0) rem(0);
+        }
+        &:hover {
+          cursor: text;
+        }
+      }
+      #submit-mail {
+        @include font_2_bold;
+        font-size: rem(16);
+        letter-spacing: rem(4);
+        min-height: rem(40);
+        background-color: $green;
+        padding: rem(15) rem(25) rem(15) rem(25);
+        margin: rem(0);
+        border: none;
+        border-radius: rem(0) rem(5) rem(5) rem(0);
+        @media #{$ipad_portrait} {
+          font-size: rem(14);
+          padding: rem(0) rem(25) rem(0) rem(25);
+          text-align: center;
+          height: rem(45);
+        }
+        @media screen and (max-width: rem(448)) {
+          text-align: center;
+          height: rem(40);
+          border-radius: rem(0) rem(0) rem(5) rem(5);
+        }
+        &:hover {
+          cursor: pointer;
+        }
+        &:active {
+          background-color: #7be55a;
+        }
+      }
+    }
+    #termes {
+      @include font_2_regular;
+      color: $white;
+      font-size: rem(14);
+      @media #{$ipad_portrait} {
+        font-size: rem(13);
+      }
+      @media screen and (max-width: rem(448)) {
+        font-size: rem(12);
+      }
+    }
+  }
+}
+
+//******************************************************************************************
+
+//****************** REAL BOTTOM ***********************************************************
+#liner-thin {
+  height: rem(0.5);
+  display: flex;
+  justify-content: center;
+  /* ------- BEFORE ------- */
+  position: relative;
+  &:before {
+    content: "";
+    background-color: #707070;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, rem(0));
+    z-index: -1;
+  } /* ---------------------- */
+  #liner-fat {
+    height: rem(1.5);
+    width: rem(740);
+    background-color: $white;
+    @media #{$ipad_portrait} {
+      width: 35%;
+    }
+    @media screen and (max-width: rem(448)) {
+      width: 50%;
+    }
+  }
+}
+
+#plus-encore {
+  //background-color: $black;
+  display: flex;
+  justify-content: center;
+  padding: rem(0) rem(0) rem(0) rem(0);
+  @media #{$ipad_portrait} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: rem(10) rem(0) rem(10) rem(0);
+  }
+  @media screen and (max-width: rem(448)) {
+    padding: rem(7.5) rem(0) rem(7.5) rem(0);
+  }
+  .pe-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(170);
+    height: rem(55);
+    @media #{$ipad_portrait} {
+      height: rem(35);
+      font-size: rem(16.5);
+    }
+    @media screen and (max-width: rem(448)) {
+      height: rem(30);
+      font-size: rem(15);
+    }
+    @include font_2_regular;
+    font-size: rem(18);
+    color: $white;
+    :hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.coockie-bot {
+  display: block;
+  position: fixed;
+  bottom: rem(10);
+  right: rem(10);
+  background-image: url(../../images/coockie_full.png);
+  background-size: cover;
+  width: rem(50);
+  height: rem(50);
+  transition: width 0.3s ease-out, height 0.3s ease-out,
+    background-image 0.1s ease-out;
+  &:hover {
+    background-image: url(../../images/coockie_bite.png);
+    background-size: cover;
+    cursor: pointer;
+    width: rem(70);
+    height: rem(70);
+  }
+}
+
+//******************************************************************************************

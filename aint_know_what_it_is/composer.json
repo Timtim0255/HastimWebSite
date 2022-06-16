@@ -1,0 +1,14 @@
+{
+    "name": "root/html",
+    "authors": [
+        {
+            "name": "Pierre Cruz",
+            "email": "contact@pierrecruz.com"
+        }
+    ],
+    "require": {
+        "facebook/graph-sdk": "^5.7",
+        "phpmailer/phpmailer": "^6.1",
+        "google/recaptcha": "^1.2"
+    }
+}
